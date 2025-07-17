@@ -4,11 +4,12 @@
   "description": "This project allows to collect emails of poeple by deplying our site to www",
   "main": "app.js",
   "scripts": {
-     "start": "node app.js"
+    "start": "node app.js"
   },
   "author": "omkar",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^17.2.0",
     "express": "^5.1.0"
   }
 }

@@ -4,6 +4,8 @@ const app = express();
 const https = require("https");
 app.use(express.urlencoded({ extended: true }))
 app.use(express.static("public"));
+require("dotenv").config();
+
 
 
 
@@ -29,7 +31,7 @@ app.post("/",function(req, res){
     })
     const options ={
         method: "POST",
-        auth :"OmkaSDr:6439a569dc00c101d90f75da7bd9d054-us4"
+        auth: "omkar:" + process.env.apiKey
     }
 
     const request = https.request(url, options, function (response){
