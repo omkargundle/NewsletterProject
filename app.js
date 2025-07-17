@@ -31,7 +31,7 @@ app.post("/",function(req, res){
     })
     const options ={
         method: "POST",
-        auth: "omkar:" + process.env.apiKey
+        auth: "omkar:" + process.env.apiKey 
     }
 
     const request = https.request(url, options, function (response){
@@ -71,71 +71,3 @@ app.post("/failure", function(req,res){
 app.listen(process.env.PORT ||3000, function (req, res) {
     console.log("Serve is listening at port 3000");
 })
-
-
-// audienc e id
-// ac860c934c
-
-// apikey
-// 6439a569dc00c101d90f75da7bd9d054-us4
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// app.post("/", function (req, res) {
-//     var fname = req.body.Fname;
-//     var lname = req.body.Lname;
-//     var email = req.body.Email;
-//     const url = "https://us4.api.mailchimp.com/3.0/lists/ac860c934c"
-
-//     const data = JSON.stringify({
-//         members: [
-//             {
-//                 email_address: email,
-//                 status: "subscribed",
-//                 merge_fields: {
-//                     FNAME: fname,
-//                     LNAME: lname
-//                 }
-//             }
-//     ]
-
-    
-//     })
-
-// const options = {
-//     method: "POST",
-//     auth: "Omkar:d71c4e293419aef0eda5f39a1eb9cfef-us4",
-// }
-// const request = https.request(url, options, function (response) {
-//     response.on("data", function (data) {
-//         var returnData = JSON.parse(data);
-//         console.log(returnData);
-
-//     })
-// })
-// request.write(data);
-// request.end();
-  
-// })
